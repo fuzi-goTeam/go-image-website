@@ -16,8 +16,8 @@ func main() {
 	// Create application
 	app := gear.New()
 
-	// app.Set("Renderer", src.Template{})
 	app.Set(gear.SetRenderer, &src.Template{})
+
 	app.UseHandler(logging.Default())
 
 	router := src.NewRouter()
